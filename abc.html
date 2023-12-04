@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK DESIGN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .intro-container {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            color: #3498db;
+        }
+
+        .tagline {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <h1 class="logo">AK DESIGN</h1>
+        <p class="tagline">Crafting Beautiful Designs</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const introContainer = document.querySelector('.intro-container');
+
+            setTimeout(() => {
+                introContainer.style.opacity = '1';
+                introContainer.style.transform = 'translateY(0)';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
